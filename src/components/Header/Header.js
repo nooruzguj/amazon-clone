@@ -1,5 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
+// { Lib }
+import {
+	MenuIcon,
+	SearchIcon,
+	ShoppingCartIcon,
+} from '@heroicons/react/outline'
+// { Components }
+
+// { Styles }
 import styles from './Header.module.scss'
 
 const Header = () => {
@@ -15,6 +23,27 @@ const Header = () => {
 						alt='Amazon Logo'
 						className={styles.fill}
 					/>
+				</div>
+				{/* Search Bar */}
+				<div className={styles.search__bar}>
+					<input />
+					<SearchIcon />
+				</div>
+				{/* { Top Right } */}
+				<div className={styles.top__right}>
+					<div className={styles.right__left}>
+						<p>Hello, Sing in</p>
+						<p className={styles.p__t}>Account & Lists</p>
+					</div>
+					<div className={styles.right__middle}>
+						<p>Returns</p>
+						<p className={styles.p__t}>& Orders</p>
+					</div>
+					<div className={styles.right__right}>
+						<span>3</span>
+						<ShoppingCartIcon />
+						<p className={styles.p__t}>Cart</p>
+					</div>
 				</div>
 			</div>
 			{/* Bottom Nav */}
