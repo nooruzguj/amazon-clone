@@ -54,6 +54,11 @@ code {
 	}
 }
 
+.main {
+	max-width: 1536px;
+	margin: 0 auto;
+}
+
 @font-face {
 	font-family: 'Amazon Ember b';
 	src: url(../public/static/fonts/AmazonEmber_Bd.ttf);

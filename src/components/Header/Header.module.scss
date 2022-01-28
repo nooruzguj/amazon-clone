@@ -32,6 +32,10 @@
 			flex-grow: 1;
 			cursor: pointer;
 
+			&:active {
+				border: 0.22rem solid transparent;
+			}
+
 			@media all and (min-width: 640px) {
 				visibility: visible;
 			}
