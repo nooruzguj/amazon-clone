@@ -12,6 +12,8 @@ body {
 	font-size: 14px;
 	line-height: 20px;
 	font-family: 'Amazon Ember b';
+	font-weight: 100 !important;
+	background-color: rgb(243, 244, 246);
 }
 
 input {
@@ -31,9 +33,25 @@ code {
 	--header-bg: rgba(19, 25, 33);
 	--search-bg: rgb(250, 204, 21);
 	--search-hover: rgb(234, 179, 8);
+	--bg-amazon-blue: rgb(35, 47, 62);
 
 	/* { Color } */
 	--text-white: rgb(255, 255, 255);
+}
+
+.link:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.cost {
+	visibility: hidden;
+}
+
+@media all and (min-width: 1024px) {
+	.cost {
+		visibility: visible;
+	}
 }
 
 @font-face {
@@ -44,4 +62,9 @@ code {
 @font-face {
 	font-family: 'Amazon Ember l';
 	src: url(../public/static/fonts/AmazonEmber_Lt.ttf);
+}
+
+@font-face {
+	font-family: 'Amazon Ember m';
+	src: url(../public/static/fonts/Amazon-Ember-Medium.ttf);
 }

@@ -149,4 +149,29 @@
 			}
 		}
 	}
+	.bottom__nav {
+		display: flex;
+		align-items: center;
+		background: var(--bg-amazon-blue);
+		color: var(--text-white);
+		font-size: 0.875rem;
+		line-height: 1.2rem;
+		padding: 0.5rem;
+		padding-left: 1.5rem;
+
+		p {
+			display: flex;
+			align-items: center;
+
+			svg {
+				height: 1.5rem;
+				margin-right: 0.25rem;
+			}
+		}
+
+		.details {
+			margin-left: 0.75rem;
+			font-family: 'Amazon Ember m';
+		}
+	}
 }

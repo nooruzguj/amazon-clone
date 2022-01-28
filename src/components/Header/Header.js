@@ -47,7 +47,23 @@ const Header = () => {
 				</div>
 			</div>
 			{/* Bottom Nav */}
-			<div></div>
+			<div className={styles.bottom__nav}>
+				<p>
+					<MenuIcon />
+					All
+				</p>
+				<p className={`link ${styles.details}`}>Today's Deals</p>
+				<p className={`link ${styles.details}`}>Buy Again</p>
+				<p className={`link ${styles.details}`}>Customer Service</p>
+				<p className={`link ${styles.details}`}>Customer Service</p>
+				<p className={`link ${styles.details} cost`}>Browsing History</p>
+				<p className={`link ${styles.details} cost`}>Gift Cards</p>
+				<p className={`link ${styles.details} cost`}>
+					Qwerty-Night <span>'s Amazon.com</span>
+				</p>
+				<p className={`link ${styles.details} cost`}>Registry</p>
+				<p className={`link ${styles.details} cost`}>Sell</p>
+			</div>
 		</header>
 	)
 }
