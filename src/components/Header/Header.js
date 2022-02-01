@@ -10,7 +10,7 @@ import {
 // { Styles }
 import styles from './Header.module.scss'
 
-const Header = () => {
+const Header = ({ value, setValue }) => {
 	return (
 		<header className={styles.header}>
 			{/* Top Nav */}
@@ -26,7 +26,7 @@ const Header = () => {
 				</div>
 				{/* Search Bar */}
 				<div className={styles.search__bar}>
-					<input />
+					<input value={value} onChange={e => setValue(e.target.value)} />
 					<SearchIcon />
 				</div>
 				{/* { Top Right } */}
