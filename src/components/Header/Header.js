@@ -5,6 +5,7 @@ import {
 	SearchIcon,
 	ShoppingCartIcon,
 } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
 // { Components }
 
 // { Styles }
@@ -15,15 +16,17 @@ const Header = ({ value, setValue }) => {
 		<header className={styles.header}>
 			{/* Top Nav */}
 			<div className={styles.header__top}>
-				<div className={styles.top__nav}>
-					<img
-						width={150}
-						height={40}
-						src='https://i.ibb.co/CQJZ9Ms/amazon-logo.png'
-						alt='Amazon Logo'
-						className={styles.fill}
-					/>
-				</div>
+				<Link to={'/'}>
+					<div className={styles.top__nav}>
+						<img
+							width={150}
+							height={40}
+							src='https://i.ibb.co/CQJZ9Ms/amazon-logo.png'
+							alt='Amazon Logo'
+							className={styles.fill}
+						/>
+					</div>
+				</Link>
 				{/* Search Bar */}
 				<div className={styles.search__bar}>
 					<input value={value} onChange={e => setValue(e.target.value)} />
@@ -39,11 +42,13 @@ const Header = ({ value, setValue }) => {
 						<p>Returns</p>
 						<p className={styles.p__t}>& Orders</p>
 					</div>
-					<div className={styles.right__right}>
-						<span>3</span>
-						<ShoppingCartIcon />
-						<p className={styles.p__t}>Cart</p>
-					</div>
+					<Link to={'basket'}>
+						<div className={styles.right__right}>
+							<span>3</span>
+							<ShoppingCartIcon />
+							<p className={styles.p__t}>Cart</p>
+						</div>
+					</Link>
 				</div>
 			</div>
 			{/* Bottom Nav */}

@@ -65,6 +65,11 @@ code {
 	flex-wrap: wrap;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+}
+
 @font-face {
 	font-family: 'Amazon Ember b';
 	src: url(../public/static/fonts/AmazonEmber_Bd.ttf);

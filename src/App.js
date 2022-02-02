@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import Banner from './components/Banner/Banner'
-import Header from './components/Header'
-import Cart from './components/Cart/Cart'
+
+import { Routes, Route } from 'react-router-dom'
+import Basket from './Pages/Basket'
+import Home from './Pages/Home'
 
 const App = () => {
 	const [items, setItems] = useState([])
@@ -15,28 +16,13 @@ const App = () => {
 
 	return (
 		<>
-			{/* Header */}
-			<Header value={value} setValue={setValue} />
-			{/* Main */}
-			<main className='main'>
-				{/* Banner */}
-				<Banner />
-				{/* ProductFeed */}
-				<div className='cart__container'>
-					{items
-						.filter(title =>
-							title.title.toLowerCase().includes(value.toLowerCase())
-						)
-						.map(item => (
-							<Cart
-								key={item.id}
-								title={item.title}
-								price={item.price}
-								imgUrl={item.image}
-							/>
-						))}
-				</div>
-			</main>
+			<Routes>
+				<Route
+					path='/'
+					element={<Home items={items} value={value} setValue={setValue} />}
+				/>
+				<Route path='basket' element={<Basket />} />
+			</Routes>
 		</>
 	)
 }

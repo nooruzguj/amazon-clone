@@ -1,3 +1,3 @@
-import ProductFeed from './ProductFeed'
+import Cart from './Cart'
 
-export default ProductFeed
+export default Cart
